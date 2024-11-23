@@ -14,7 +14,7 @@ class LivemasksServiceProvider extends ServiceProvider
 
   public function boot()
   {
-    $this->loadViewsFrom(__DIR__.'/../resources/views', 'livemask');
+    $this->loadViewsFrom(__DIR__.'/../resources/views', 'livemasks');
     Livewire::component('livemask-money', MoneyInput::class);
   }
 }
