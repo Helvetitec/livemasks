@@ -5,7 +5,7 @@ namespace Helvetitec\Livemasks\Http\Livewire;
 use Livewire\Attributes\Modelable;
 use Livewire\Component;
 
-class MonetaryInput extends Component
+class MoneyInput extends Component
 {
     #[Modelable]
     public $unmaskedValue = '';

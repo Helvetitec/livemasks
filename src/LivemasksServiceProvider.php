@@ -2,7 +2,7 @@
 
 namespace Helvetitec\Livemasks;
 
-use Helvetitec\Livemasks\Http\Livewire\MonetaryInput;
+use Helvetitec\Livemasks\Http\Livewire\MoneyInput;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 
@@ -15,6 +15,6 @@ class LivemasksServiceProvider extends ServiceProvider
   public function boot()
   {
     $this->loadViewsFrom(__DIR__.'/../resources/views', 'livemask');
-    Livewire::component('livemask.money', MonetaryInput::class);
+    Livewire::component('livemask-money', MoneyInput::class);
   }
 }

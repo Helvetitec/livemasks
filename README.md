@@ -10,5 +10,5 @@ Add a money Input to your platform
 - v4: (string) class from the input
 - v5: (boolean) Set the input to required or not
 ```html
-<livewire:livemask.money wire:model.live='v1' id="v2" name="v3" class="v4" :required="v5"/>
+<livewire:livemasks.money wire:model.live='v1' id="v2" name="v3" class="v4" :required="v5"/>
 ```
