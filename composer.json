@@ -1,0 +1,30 @@
+{
+    "name": "helvetitec/livemasks",
+    "description": "Input masks for Laravel Livewire v3",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Helvetitec\\Livemasks\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Roman Wanner",
+            "email": "60240491+daredloco@users.noreply.github.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Helvetitec\\Livemasks\\LivemasksServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9"
+    },
+    "require": {
+        "laravel/framework": "^11.0",
+        "livewire/livewire": "^3.0"
+    }
+}
