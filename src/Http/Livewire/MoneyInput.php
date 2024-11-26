@@ -20,4 +20,9 @@ class MoneyInput extends Component
     {
         return view('livemasks::money-input');
     }
+
+    public function rendered()
+    {
+        $this->dispatch('money-input-updated', id: $this->id, value: $this->unmaskedValue);
+    }
 }

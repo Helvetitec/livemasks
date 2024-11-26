@@ -1,5 +1,5 @@
 <div>
-    <input x-data="mask{{ $id }}('{{ $id }}', '{{ $currencySign }}')" class="{{ $class }}" x-on:blur="getValue()" id="{{ $id }}" name="{{ $name }}" type="text" @if($required) required @endif @if($disabled) disabled @endif />
+    <input x-data="mask{{ $id }}('{{ $id }}', '{{ $currencySign }}')" x-on:money-input-updated.window="if($event.detail.id == '{{ $id }}'){ setValue(); }" class="{{ $class }}" x-on:blur="getValue()" id="{{ $id }}" name="{{ $name }}" type="text" @if($required) required @endif @if($disabled) disabled @endif />
     @script
         <script>
                     Alpine.data('mask{{ $id }}', (inputId, currencySign) => ({
@@ -22,12 +22,16 @@
                                     }
                                 }
                             );
-                            this.inputMask.unmaskedValue = $wire.unmaskedValue + "";
+                            this.setValue();
                             this.inputMask.updateValue();
                         },
                         getValue() {
                             $wire.unmaskedValue = this.inputMask.unmaskedValue;
                         },
+                        setValue() {
+                            this.inputMask.unmaskedValue = $wire.unmaskedValue + "";
+                            this.inputMask.updateValue();
+                        }
                     }));
         </script>
     @endscript
