@@ -3,6 +3,7 @@
 namespace Helvetitec\Livemasks\Http\Livewire;
 
 use Livewire\Attributes\Modelable;
+use Livewire\Attributes\Reactive;
 use Livewire\Component;
 
 class MoneyInput extends Component
@@ -14,6 +15,7 @@ class MoneyInput extends Component
     public $currencySign = '';
     public $class = '';
     public $required = false;
+    #[Reactive]
     public $disabled = false;
 
     public function render()
